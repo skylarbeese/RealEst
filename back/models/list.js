@@ -41,6 +41,10 @@ price: {
     type: String,
     required: false
 },
+rent: {
+    type: String,
+    required: false
+},
 image: {
     type: String,
     required: false

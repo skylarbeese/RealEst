@@ -12,6 +12,7 @@ function More(props) {
     const [bedrooms, setBedrooms] = useState('')
     const [des, setDes] = useState('')
     const [price, setPrice] = useState('')
+    const [rent, setRent] = useState('')
     const [street, setStreet] = useState('')
     const [property, setProperty] = useState('')
     const [extra, setExtra] = useState('')
@@ -29,7 +30,7 @@ function More(props) {
         setBathrooms(res.data.bathrooms), setBedrooms(res.data.bedrooms),
         setDes(res.data.des), setImage(res.data.image), setPrice(res.data.price),
         setStreet(res.data.street), setProperty(res.data.property), setExtra(res.data.extra),
-        setParking(res.data.parking),
+        setParking(res.data.parking), setRent(res.data.parking)
     ])
        .catch(err => console.log(err)) 
      }, [])

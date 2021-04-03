@@ -29,6 +29,16 @@
     display: flex;
  
 }
+.radio-price{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.price-radio{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 .radio-prop{
     width: 50%;
   

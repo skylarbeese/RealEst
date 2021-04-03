@@ -34,9 +34,10 @@ function Banner({title}) {
          </div>
            <div className="search">
               <form action="" className="form-sea">
+                <i class="fa fa-search" aria-hidden="true"></i>
                 <input name="find" type="text" placeholder="" value={data} className="" 
                  onChange={(e) => setData(e.target.value)}  />
-                 {/*<input type="submit" value="submit" onClick={(e) => searchs(data)} /> */}
+                 {/* <input type="submit" value="submit" onClick={(e) => searchs(data)} /> */}
               </form>
            </div>
        </div>

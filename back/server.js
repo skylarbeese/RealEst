@@ -27,7 +27,7 @@ app.post('/inst', async (req, res) => {
     const des = req.body.des;
     const image = req.body.image;
     const price = req.body.price;
-
+    const rent = req.body.rent;
   
     const street = req.body.street;
     const property = req.body.property;
@@ -36,7 +36,7 @@ app.post('/inst', async (req, res) => {
 
     const list = new List({
          state, city, address, poBox, sqf, anchers, bathrooms,
-         bedrooms, des, image, price, street, property, extra, parking
+         bedrooms, des, image, price, street, property, extra, parking, rent
     })
     
     const newList = list.save()

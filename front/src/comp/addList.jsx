@@ -14,6 +14,7 @@ function AddList() {
     const [des, setDes] = useState('')
     const [image, setImage] = useState('')
     const [price, setPrice] = useState('')
+    const [rent, setRent] = useState('')
     const [street, setStreet] = useState('')
     const [property, setProperty] = useState('')
     const [extra, setExtra] = useState('')
@@ -26,7 +27,7 @@ function AddList() {
          state: state, city: city, address: address, poBox: poBox,
          sqf: sqf, anchers: anchers, bathrooms: bathrooms, bedrooms: bedrooms,
          des: des, image: image, price: price, street: street, property: property,
-         extra: extra, parking: parking
+         extra: extra, parking: parking, rent: rent
        })
        .then(res => setMessage(res.data))
    }
@@ -80,11 +81,11 @@ function AddList() {
 
             <div className="radio-price">
               <label>price*</label>
-              <input name="price-rent" type="radio" value="rent" onChange={(e) => setPrice(e.target.value)} /> Rent
-              <input name="price-rent" type="text" placeholder="price" className="form-control" onChange={(e) => setPrice(e.target.value)} />
+              <input name="price-rent" type="radio" value="rent" className="" onChange={(e) => setRent(e.target.value)} /> Rent
+              <input name="price-rent" type="text" placeholder="price" className="form-control price-radio" onChange={(e) => setPrice(e.target.value)} />
 
-              <input name="price-sale" type="radio" value="sale" onChange={(e) => setPrice(e.target.value)} /> Sale
-              <input name="price-sale" type="text" placeholder="price" className="form-control" onChange={(e) => setPrice(e.target.value)} />
+              <input name="price-sale" type="radio" value="sale" className="" onChange={(e) => setRent(e.target.value)} /> Sale
+              <input name="price-sale" type="text" placeholder="price" className="form-control price-radio" onChange={(e) => setPrice(e.target.value)} />
             </div>
             
              <label>more information about the property*</label>
