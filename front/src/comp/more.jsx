@@ -32,6 +32,12 @@ function More(props) {
     ])
        .catch(err => console.log(err)) 
      }, [])
+     
+     const Del = () => {
+      axios.delete(`/del/${props.match.params.id}`)
+       .then(res => console.log(res.data))
+       
+    }
     return (
      <>
        <div className="more-div">
@@ -66,6 +72,9 @@ function More(props) {
                   <h2 className="bed">bedrooms: {bedrooms}</h2>
                   <h1>{property}</h1>
                </div>
+            </div>
+            <div className="btn">
+              <button onClick={Del}>delete</button>
             </div>
         </div>
      </>

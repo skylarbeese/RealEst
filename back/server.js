@@ -67,4 +67,13 @@ app.get('/inst/read', async (req, res) => {
        res.send(result)
      })
    })
+   app.delete('/inst/del/:id', async (req, res) => {
+    const id = req.params.id
+    List.findByIdAndDelete(id, (err, result) => {
+      if(err) {
+        res.send(err)
+      }
+      res.send(result)
+    })
+  })
 app.listen(3001)
