@@ -7,10 +7,16 @@ import axios from 'axios'
 function Banner({title}) {
   const [data, setData] = useState('')
   const [search, setSearch] = useState([])
-  useEffect(() => {
-    axios.get('/read').then((res) => { setSearch(res.data)})
-   
-  }, [])
+
+  useEffect(() => {  
+    
+  /* const searchs = (ev) => {
+      if(ev.key === 'Enter') { */
+    axios.get('/read').then((res) => {setSearch(res.data)})
+    /*  }
+    } */
+  }, []) 
+
   function searchIn(row) {
     return row.filter(ro => 
       ro.state.toLowerCase().indexOf(data) > -1 ||
@@ -29,8 +35,8 @@ function Banner({title}) {
            <div className="search">
               <form action="" className="form-sea">
                 <input name="find" type="text" placeholder="" value={data} className="" 
-                 onChange={(e) => setData(e.target.value)} />
-              
+                 onChange={(e) => setData(e.target.value)}  />
+                 {/*<input type="submit" value="submit" onClick={(e) => searchs(data)} /> */}
               </form>
            </div>
        </div>

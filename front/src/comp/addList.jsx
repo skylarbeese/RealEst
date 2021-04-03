@@ -78,9 +78,15 @@ function AddList() {
              <label>parking*</label>
               <input name="parking" type="text" placeholder="parking" className="form-control" onChange={(e) => setParking(e.target.value)} />
 
-             <label>price*</label>
-              <input name="price" type="text" placeholder="price" className="form-control" onChange={(e) => setPrice(e.target.value)} required/>
+            <div className="radio-price">
+              <label>price*</label>
+              <input name="price-rent" type="radio" value="rent" onChange={(e) => setPrice(e.target.value)} /> Rent
+              <input name="price-rent" type="text" placeholder="price" className="form-control" onChange={(e) => setPrice(e.target.value)} />
 
+              <input name="price-sale" type="radio" value="sale" onChange={(e) => setPrice(e.target.value)} /> Sale
+              <input name="price-sale" type="text" placeholder="price" className="form-control" onChange={(e) => setPrice(e.target.value)} />
+            </div>
+            
              <label>more information about the property*</label>
              <textarea name="des" id="" cols="30" rows="10" className="form-control" onChange={(e) => setDes(e.target.value)}>description</textarea>
             <div className="file">

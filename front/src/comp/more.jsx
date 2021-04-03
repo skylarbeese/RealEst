@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 function More(props) {
     const [state, setState] = useState('')
     const [city, setCity] = useState('')
@@ -74,7 +75,7 @@ function More(props) {
                </div>
             </div>
             <div className="btn">
-              <button onClick={Del}>delete</button>
+              <Link to="/"><button onClick={Del}>delete</button></Link>
             </div>
         </div>
      </>

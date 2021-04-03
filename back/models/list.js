@@ -37,6 +37,10 @@ des: {
     type: String,
     required: true
 },
+price: {
+    type: String,
+    required: false
+},
 image: {
     type: String,
     required: false
