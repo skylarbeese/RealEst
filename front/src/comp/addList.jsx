@@ -23,21 +23,67 @@ function AddList() {
     const [message, setMessage] = useState('')
    const add = (e) => {
        e.preventDefault()
+      let form = new FormData()
+
+
+    /*   form.append('state', state)
+       form.append('city', city)
+       form.append('address', address)
+       form.append('poBox', poBox)
+       form.append('sqf', sqf)
+       form.append('anchers', anchers)
+       form.append('bathrooms', bathrooms)
+       form.append('bedrooms', bedrooms)
+       form.append('des', des)
+       form.append('price', price)
+       form.append('street', street)
+       form.append('property', property)
+       form.append('extra', extra)
+       form.append('parking', parking) 
+       form.append('rent', rent) */
+       form.append('imageLoad', image) 
+       console.log(form)
+       
        axios.post('/',  {
          state: state, city: city, address: address, poBox: poBox,
          sqf: sqf, anchers: anchers, bathrooms: bathrooms, bedrooms: bedrooms,
-         des: des, image: image, price: price, street: street, property: property,
-         extra: extra, parking: parking, rent: rent
+         des: des,  price: price, street: street, property: property,
+         extra: extra, parking: parking,   rent: rent,  form
        })
        .then(res => setMessage(res.data))
-   }
+   
+/*   const config = {
+    headers: {
+      "content-type": "multipart/form-data"
+      
+    },
+  } */
+   /*axios({
+    method: 'post',
+    url: '/',
+    data:  {  state,  city,  address,  poBox,
+     sqf,  anchers,  bathrooms,  bedrooms,
+     des,   price,  street,  property,
+     extra,  parking,   rent, form},
+    headers: config
+    })
+    .then(function (response) {
+        //handle success
+        
+        console.log(response);
+    })
+    .catch(function (response) {
+        //handle error
+        console.log(response);
+    }); */
+  }
     return (
     <>
      <Nav />
        <div className="add-list">
            <div>{message}</div>
         <div className="form">
-         <form action="" className="add-form">
+         <form action="" className="add-form" >
              <label>State*</label>
              <input name="state" type="text" placeholder="state" className="form-control" onChange={(e) => setState(e.target.value)} required/>
              <label>city*</label>
@@ -89,10 +135,10 @@ function AddList() {
             </div>
             
              <label>more information about the property*</label>
-             <textarea name="des" id="" cols="30" rows="10" className="form-control" onChange={(e) => setDes(e.target.value)}>description</textarea>
+             <textarea name="des" id="" cols="30" rows="10" className="form-control" onChange={(e) => setDes(e.target.value)}></textarea>
             <div className="file">
              <label>upload images of property</label>
-             <input type="file" name="profile_image" onChange={(e) => setImage(e.target.value)}/>
+             <input type="file" name='imageLoad' onChange={(e) => setImage(e.target.files[0])}/>
             </div>
             <div className="submit">
              <input type="submit" value="post-listing" className="btn" onClick={add}/>
