@@ -1,5 +1,5 @@
 const Arr = [
-    "/img/img3.jpg"
+    "/img/img2.jpg"
 
   
  
