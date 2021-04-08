@@ -1,0 +1,48 @@
+
+.listing-box{
+    width: 30vw;
+    height: 40vh;
+    background-color: transparent;
+    border: black 2px solid;
+    color: black;
+    text-decoration: none;
+}
+.home-det{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+a .prop-link{
+    color: #000;
+    
+}
+.listing-box a {
+    position: absolute;
+}
+
+.prop-image{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-color: teal;
+}
+.propert h1, .price h1{
+    font-size: 1rem;
+}
+.bath, .bed, .sqf{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.bed, .sqf{
+    margin-left: 1.4rem;
+}
+.bath h1, .bed h1, .sqf h1{
+    font-size: 1rem;
+    
+}
+.bath-title, .bed-title, .sqf-title{
+    margin-left: .4rem;
+}

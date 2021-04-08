@@ -93,7 +93,7 @@ function AddList() {
              <label>postal code</label>
              <input name="postal-code" type="text" placeholder="postal-code" className="form-control" onChange={(e) => setPoBox(e.target.value)}  />
              <label>Square foot</label>
-             <input name="square-foot" type="text" placeholder="square-foot" className="form-control" onChange={(e) => setSqf(e.target.value)}  />
+             <input name="square-foot" type="number" placeholder="square-foot" className="form-control" onChange={(e) => setSqf(e.target.value)}  />
              <label>anchers/yard</label>
              <input name="anchers" type="text" placeholder="property anchers" className="form-control" onChange={(e) => setAnchers(e.target.value)} />
              <label>bathrooms*</label>

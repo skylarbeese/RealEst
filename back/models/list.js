@@ -18,7 +18,7 @@ poBox: {
     required: false
 },
 sqf: {
-    type: String,
+    type: Number,
     required: false
 },
 anchers: {
