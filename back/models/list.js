@@ -38,7 +38,7 @@ des: {
     required: true
 },
 price: {
-    type: String,
+    type: Number,
     required: false
 },
 rent: {

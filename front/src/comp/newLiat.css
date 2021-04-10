@@ -1,4 +1,69 @@
-
+.new-list{
+    width: 50vw;
+    border-right: 1px black solid;
+    
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.address-zip{
+    width: 100%;
+    
+    display: flex;
+    
+}
+.stateS h1, .cityC h1{
+    font-size: 1rem;
+    margin-right: .5rem;
+}
+.new-div{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 3rem;
+}
+.price{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.dol-sign{
+    margin-right: 3px;
+    opacity: .8;
+    
+}
+.loc{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: teal;
+    padding: 1rem;
+}
+.loc h1{
+    margin: .3rem;
+    font-size: 1rem;
+}
+.sear{
+  opacity: .8;
+  letter-spacing: .2rem;
+}
+.locat{
+  font-weight: bold;
+  letter-spacing: .2rem;
+}
+.arrows {
+    font-size: 3rem;
+    z-index: 2;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+   position: absolute; 
+    font-size: 1rem;
+}
 .listing-box{
     width: 30vw;
     height: 40vh;
@@ -7,28 +72,48 @@
     color: black;
     text-decoration: none;
 }
+.re{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
 .home-det{
     justify-content: center;
     align-items: center;
     display: flex;
     
+    width: 100%;
+    height: 30%;
 }
 a .prop-link{
     color: #000;
     
 }
-.listing-box a {
+.listing-box a .prop-link{
     position: absolute;
+    z-index: 1;
 }
-
+.prop-price{
+    position: absolute;
+    z-index: 1;
+    margin-top: 6rem;
+    margin-left: 2rem;
+    color: white;
+}
 .prop-image{
     position: relative;
     width: 100%;
-    height: 50%;
+    height: 70%;
     background-color: teal;
 }
-.propert h1, .price h1{
+
+.propert h1{
     font-size: 1rem;
+}
+.price h1{
+    font-size: 2rem;
 }
 .bath, .bed, .sqf{
     justify-content: center;

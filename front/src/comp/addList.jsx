@@ -117,7 +117,8 @@ function AddList() {
              <label>Extra features</label>
               <input type="radio" name="extra" value="fireplace" onChange={(e) => setExtra(e.target.value)} />fireplace
               <input type="radio" name="extra" value="pool" onChange={(e) => setExtra(e.target.value)} />pool
-              
+              <input type="radio" name="extra" value="basement" onChange={(e) => setExtra(e.target.value)} />basement
+              <input type="radio" name="extra" value="attic" onChange={(e) => setExtra(e.target.value)} />attic
             </div>
          </div>
          </div>
@@ -128,10 +129,10 @@ function AddList() {
             <div className="radio-price">
               <label>price*</label>
               <input name="price-rent" type="radio" value="rent" className="" onChange={(e) => setRent(e.target.value)} /> Rent
-              <input name="price-rent" type="text" placeholder="price" className="form-control price-radio" onChange={(e) => setPrice(e.target.value)} />
+              <input name="price-rent" type="number" placeholder="price" className="form-control price-radio" onChange={(e) => setPrice(e.target.value)} />
 
               <input name="price-sale" type="radio" value="sale" className="" onChange={(e) => setRent(e.target.value)} /> Sale
-              <input name="price-sale" type="text" placeholder="price" className="form-control price-radio" onChange={(e) => setPrice(e.target.value)} />
+              <input name="price-sale" type="number" placeholder="price" className="form-control price-radio" onChange={(e) => setPrice(e.target.value)} />
             </div>
             
              <label>more information about the property*</label>

@@ -6,9 +6,10 @@ import Arr from './../Arr'
 import axios from 'axios'
 
 function Banner({title}) {
+
   const [data, setData] = useState('')
   const [search, setSearch] = useState([])
-  
+ const [sear, setSear] = useState(false)
   useEffect(() => {  
     
  
@@ -21,9 +22,14 @@ function Banner({title}) {
       ro.state.toLowerCase().indexOf(data) > -1 ||
       ro.city.toLowerCase().indexOf(data) > -1 ||
       ro.address.toLowerCase().indexOf(data) > -1
+
+      
+    
     
     )
   }
+  //const t = search.length
+  //console.log(t)
     return (
 
     <>
@@ -45,7 +51,8 @@ function Banner({title}) {
               
            </div>
        </div>
-       <NewList title={title} search={searchIn(search)}/>
+         <NewList title={title} search={searchIn(search)} data={data}/>  
+
        </div>
        </>
      
