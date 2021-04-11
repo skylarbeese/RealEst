@@ -1,22 +1,22 @@
 import Nav from './nav'
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Banner.css';
 import NewList from './newList'
 import Arr from './../Arr'
 import axios from 'axios'
 
-function Banner({title}) {
+function Banner(props) {
+  const inputEl = React.useRef()
+  const [data, setData] = useState("")
+ // const [search, setSearch] = useState([])
 
-  const [data, setData] = useState('')
-  const [search, setSearch] = useState([])
- const [sear, setSear] = useState(false)
-  useEffect(() => {  
+ /* useEffect(() => {  
     
  
-    axios.get('/read').then((res) => {setSearch(res.data)})
+    axios.get('/read').then((res) => {props.setSearch(res.data)})
 
   }, []) 
-
+/*
   function searchIn(row) {
     return row.filter(ro => 
       ro.state.toLowerCase().indexOf(data) > -1 ||
@@ -27,6 +27,9 @@ function Banner({title}) {
     
     
     )
+  } */
+  const searchTerm = () => {
+     props.searchHandler(inputEl.current.value)
   }
   //const t = search.length
   //console.log(t)
@@ -44,14 +47,15 @@ function Banner({title}) {
              <div className="text"><h1> Find your Dream home </h1></div>
               <form action="" className="form-sea">
                 <i class="fa fa-search" aria-hidden="true"></i>
-                <input name="find" type="text" placeholder="address, state, city, zip code" value={data} className="" 
-                 onChange={(e) => setData(e.target.value)}  />
-              
+                <input ref={inputEl} name="find" type="text" placeholder="address, state, city, zip code"  className="" 
+               onChange={searchTerm}/>
+                {/* onChange={(e) => setData(e.target.value)} value={data}    search={searchIn(props.search)}*/} 
               </form>
               
            </div>
        </div>
-         <NewList title={title} search={searchIn(search)} data={data}/>  
+       {props.search.length > 0 ? ( <NewList titleArray={props.titleArray}  searchTerm={props.searchTerm} search={props.search} data={data}/> )
+       : <div>none</div>} 
 
        </div>
        </>

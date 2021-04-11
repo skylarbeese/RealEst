@@ -4,10 +4,10 @@ import './newLiat.css';
 import {Link} from 'react-router-dom'
 import { useState } from 'react';
 
-function NewList({title, search, data}) {
+function NewList({titleArray, search, data, searchTerm}) {
   const [active, setActive] = useState(0)
   const length = search.length
-
+console.log(search)
   //console.log(length)
   const nextSlide = () => {
     setActive(active === 0 ? length - 1 : active - 1)
@@ -22,7 +22,7 @@ function NewList({title, search, data}) {
 
   return (
       <>
-      <div className="loc"><h1 className="sear">({search.length}) listings found for properties in location: </h1><h1 className="locat">{data}</h1></div>
+      <div className="loc"><h1 className="sear">({search.length}) listings found for properties in location: </h1><h1 className="locat">{searchTerm}</h1></div>
        <div className="new-list">
          
          <div className="new-div">
@@ -32,7 +32,7 @@ function NewList({title, search, data}) {
               <div className="next"onClick={nextSlide}>next</div>
             </div>
             
-  <div>{search.map((ti, index) => {
+ <div>{search.map((ti, index) => {
           return (  <>
         <div>
          {index === active && <div className="listing-box">

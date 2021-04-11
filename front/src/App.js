@@ -7,6 +7,7 @@ import AddList from './comp/addList'
 import More from './comp/more'
 function App() {
   const [titleArray, setTitleArray] = React.useState([])
+  
   React.useEffect(() => {
    axios.get('/read').then((res) => { setTitleArray(res.data)})
   
