@@ -33,16 +33,11 @@ nav{
   text-decoration: none;
 }
 .home-dir a li{
-    color: white;
+    color: rgb(253, 253, 253);
     list-style: none;
     font-size: 1.3rem;
     font-family: 'Barlow', sans-serif;
     
     letter-spacing: .3rem;
     
-}
-.home-dir a li:hover {
-    transition: .6s;
-    border-bottom: 2px solid brown;
-    color: brown;
 }

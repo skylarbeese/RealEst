@@ -1,6 +1,7 @@
 import Nav from './nav'
 import React, {useState, useEffect} from 'react'
 import './Add.css';
+import Footer from './footer'
 import axios from 'axios'
 function AddList() {
     const [state, setState] = useState('')
@@ -79,9 +80,16 @@ function AddList() {
   }
     return (
     <>
-     <Nav />
+    <div className="nav-d">
+    <Nav />
+    </div>
+     
        <div className="add-list">
-           <div>{message}</div>
+         <div className="header-text">
+            <h1>Create a new property listing</h1>
+            <div className="underline"></div>
+         </div>
+           <div className="mess">{message}</div>
         <div className="form">
          <form action="" className="add-form" >
              <label>State*</label>
@@ -147,6 +155,7 @@ function AddList() {
          </form>
          </div>
        </div>
+       <Footer />
      </>
     );
   }

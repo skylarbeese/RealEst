@@ -2,7 +2,7 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import React from 'react'
 import axios from 'axios'
-import Home from './comp/home'
+import Home1 from './comp/home1'
 import AddList from './comp/addList'
 import More from './comp/more'
 function App() {
@@ -19,7 +19,7 @@ function App() {
      
         <Route path="/comp/more/:id"  render={(props) => <More {...props}  titleArray={titleArray}/>} />
         <Route path="/comp/addList" component={AddList} />
-        <Route path="/" ><Home titleArray={titleArray}/></Route>
+        <Route path="/" ><Home1 titleArray={titleArray}/></Route>
        </Switch>
      </Router>
    </>

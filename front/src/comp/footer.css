@@ -1,0 +1,52 @@
+
+
+.footer-div{
+    width: 100vw;
+    background-color: rgb(32, 32, 32);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 1rem;
+}
+.text-con{
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    width: 70%;
+}
+.text-h{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: cornsilk;
+}
+.icons{
+    color: cornsilk;
+}
+.text-h h1{
+    font-size: .8rem;
+}
+
+.icons h1{
+    font-size: .8rem; 
+}
+div.facebook h1, div.insta h1, div.youtube h1 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   
+}
+.contactt{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: cornsilk;
+}
+.contactt h1{
+    font-size: .8rem; 
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom: 1px white solid;
+}

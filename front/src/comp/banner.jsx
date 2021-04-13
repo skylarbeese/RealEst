@@ -29,8 +29,9 @@ function Banner(props) {
     )
   } */
   const searchTerm = () => {
-     props.searchHandler(inputEl.current.value)
+    props.searchHandler(inputEl.current.value)
   }
+ 
   //const t = search.length
   //console.log(t)
     return (
@@ -49,11 +50,14 @@ function Banner(props) {
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input ref={inputEl} name="find" type="text" placeholder="address, state, city, zip code"  className="" 
                onChange={searchTerm}/>
+              
                 {/* onChange={(e) => setData(e.target.value)} value={data}    search={searchIn(props.search)}*/} 
               </form>
               
            </div>
        </div>
+      {props.searchTerm.length > 1 ? <div className="loc"><div className="locc"><h1 className="sear">({props.search.length}) listings found for properties in location: </h1><h1 className="locat">{props.searchTerm}</h1></div></div>
+      : <div className="loc"></div>}
        {props.search.length > 0 ? ( <NewList titleArray={props.titleArray}  searchTerm={props.searchTerm} search={props.search} data={data}/> )
        : <div>none</div>} 
 

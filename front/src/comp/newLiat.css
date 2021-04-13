@@ -1,6 +1,6 @@
 .new-list{
     width: 50vw;
-    border-right: 1px black solid;
+  
     
     justify-content: center;
     align-items: center;
@@ -15,16 +15,30 @@
     display: flex;
     height: 50%;
 }
-.stateS h1, .cityC h1{
+.stateS h1, .cityC h1, .streett h1{
     font-size: 1rem;
-    margin-right: .5rem;
+    margin-right: .2rem;
 }
+.streett {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.stateS{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+/*------------------------------------------------------------------------*/
 .new-div{
-    width: 100%;
+    width: 50vw;
+    height: 60vh;
     justify-content: center;
     align-items: center;
     display: flex;
     padding: 3rem;
+    overflow: hidden;
+    position: relative;
 }
 .price{
     justify-content: center;
@@ -41,10 +55,18 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    background-color: teal;
-    padding: 1rem;
+    background-color: rgb(126, 126, 126);
+    padding: .4rem;
+   
+}
+.locc{
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .loc h1{
+    
     margin: .3rem;
     font-size: 1rem;
 }
@@ -56,40 +78,81 @@
   font-weight: bold;
   letter-spacing: .2rem;
 }
+/*-----------------------------------------------------*/
 .arrows {
-    font-size: 3rem;
-    z-index: 2;
-    width: 70%;
+    
+    z-index: 1;
+    width: 100%;
+    opacity: .7;
     justify-content: space-around;
     align-items: center;
     display: flex;
    position: absolute; 
-    font-size: 1rem;
+    font-size: 2rem;
 }
+
+.arrows .prev i, .next i {
+    font-size: 2rem;
+}
+.prev:hover{
+    color: rgb(0, 0, 0);
+    transition: .1;
+    
+}
+.next:hover{
+    color: rgb(0, 0, 0);
+    transition: .2;
+}
+/*----------------------------------------------------------*/
+.prev-appear {
+    transform: translateX(-6rem);
+    transition: 1s .3s;
+}
+.prev-hide {
+    transform: translateX(-200px);
+  transition: 1s .3s;
+}
+.next-appear {
+    transform: translateX(6rem);
+  transition: 1s .3s;
+}
+.next-hide{
+    transform: translateX(200px);
+    transition: 1s .3s;
+}
+/*-------------------------------------------------------*/
 .listing-box{
-    width: 30vw;
-    height: 40vh;
+    width: 50vw;
+    height: 60vh;
     background-color: transparent;
-    border: black 2px solid;
+    overflow: hidden;
     color: black;
     text-decoration: none;
+    position: relative;
 }
 .re{
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    z-index: 1;
     width: 100%;
     height: 30%;
+    bottom: 0;
 }
+/*---------------------------------------------------------*/
 .home-det{
     justify-content: center;
     align-items: center;
     display: flex;
-    
+    background-color: rgb(1, 133, 133, .2);
     width: 100%;
     height: 50%;
+    z-index: 2;
+    color: cornsilk;
 }
+
 a .prop-link{
     color: #000;
     
@@ -105,13 +168,23 @@ a .prop-link{
     margin-left: 2rem;
     color: white;
 }
+/*---------------------------------------------------------*/
 .prop-image{
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 70%;
+    height: 100%;
     background-color: teal;
 }
-
+.image-box{
+    width: 100%;
+    height: 100%;
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/*-------------------------------------------------------*/
 .propert h1{
     font-size: 1rem;
 }
@@ -124,6 +197,35 @@ a .prop-link{
     display: flex;
     
 }
+/*-----------------------------------------------------------*/
+  .appear-bed{
+    transform: translateY(0px);
+    transition: 1s .3s;
+   }
+   .hide-bed{
+    transform: translateY(140px);
+    transition: 1s .3s;
+   }
+
+   .appear-bath{
+    transform: translateY(0px);
+    transition: 1s .3s;
+  }
+   .hide-bath{
+    transform: translateY(140px);
+    transition: 1s .3s;
+  }
+
+  .appear-sqf{
+    transform: translateY(0px);
+    transition: 1s .3s;
+ }
+  .hide-sqf{
+    transform: translateY(140px);
+    transition: 1s .3s;
+} 
+
+/*-----------------------------------------------------------*/
 .bed, .sqf{
     margin-left: 1.4rem;
 }

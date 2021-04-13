@@ -35,7 +35,7 @@ function Home({titleArray}) {
        <Banner titleArray={titleArray} searchHandler={searchHandler} searchTerm={searchTerm} 
        search={searchTerm.length < 1 ? search : searchResult} />
     {/*   <NewList title={titleArray}/> */}
-       <Footer />
+      
      </>
     );
   }
