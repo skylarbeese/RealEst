@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import Nav from './nav'
+import Footer from './footer'
 import {Link} from 'react-router-dom'
 function More(props) {
     const [state, setState] = useState('')
@@ -42,6 +44,9 @@ function More(props) {
     }
     return (
      <>
+     <div className="nav-d">
+    <Nav />
+    </div>
        <div className="more-div">
           
            <div className="location">
@@ -79,7 +84,9 @@ function More(props) {
               <Link to="/"><button onClick={Del}>delete</button></Link>
             </div>
         </div>
+        <Footer />
      </>
+
     );
   }
   

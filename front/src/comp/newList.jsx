@@ -57,7 +57,7 @@ console.log(search)
         <div>
          {index === active && <div className="listing-box" >
            
-              <Link to={{pathname: `/comp/more/${ti._id}`}}><div className="prop-link">View</div></Link>
+              <Link to={{pathname: `/comp/more/${ti._id}`}}><div className="prop-link">View {ti.property}</div></Link>
               <div className='prop-price'>
                 <div className="propert"><h1>{ti.property}</h1></div>
                 <div className="price"><h1 className="dol-sign">$</h1><h1>{ti.price}</h1></div>
