@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Banner from './banner'
 import NewList from './newList'
 import Footer from './footer'
+
 import axios from 'axios'
 function Home({titleArray}) {
   const [searchTerm, setSearchTerm] = useState('')
@@ -35,7 +36,7 @@ function Home({titleArray}) {
        <Banner titleArray={titleArray} searchHandler={searchHandler} searchTerm={searchTerm} 
        search={searchTerm.length < 1 ? search : searchResult} />
     {/*   <NewList title={titleArray}/> */}
-      
+   
      </>
     );
   }

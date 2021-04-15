@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import Nav from './nav'
+import './more.css';
+import Arr from './../Arr'
 import Footer from './footer'
+
 import {Link} from 'react-router-dom'
 function More(props) {
     const [state, setState] = useState('')
@@ -47,9 +50,13 @@ function More(props) {
      <div className="nav-d">
     <Nav />
     </div>
+
        <div className="more-div">
-          
-           <div className="location">
+          <div className="images">
+            <div className="image-bb" style= {{backgroundImage: `url(${Arr})`}}></div>
+          </div>
+
+          <div className="location">
 
                <div className="st-ci">
                 <h2 className="state">{state}</h2>
@@ -82,8 +89,9 @@ function More(props) {
             </div>
             <div className="btn">
               <Link to="/"><button onClick={Del}>delete</button></Link>
-            </div>
+            </div> 
         </div>
+    
         <Footer />
      </>
 

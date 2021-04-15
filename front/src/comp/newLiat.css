@@ -161,6 +161,32 @@ a .prop-link{
     position: absolute;
     z-index: 1;
 }
+.link{
+    float: right;
+}
+.prop-link{
+    
+    padding: .5rem;
+    border-radius: 10px;
+    margin: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 2px solid rgb(6, 17, 17);
+    background-color: rgb(6, 17, 17, .6);
+}
+.prop-link:hover{
+    background-color: rgb(6, 17, 17);
+    transition: .5;
+}
+.prop-link h1{
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 .prop-price{
     position: absolute;
     z-index: 1;

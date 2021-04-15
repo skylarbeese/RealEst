@@ -1,6 +1,7 @@
 //import React, {useState, useEffect} from 'react'
 //import axios from 'axios'
 import Footer from './footer'
+import Email from './email'
 import Arr from './../Arr'
 import './newLiat.css';
 import {Link} from 'react-router-dom'
@@ -53,15 +54,19 @@ console.log(search)
 
  {/*  <Slider {...settings}>  */}      
 {search.map((ti, index) => {
-          return (  <>
+
+          return (<>
         <div>
          {index === active && <div className="listing-box" >
            
-              <Link to={{pathname: `/comp/more/${ti._id}`}}><div className="prop-link">View {ti.property}</div></Link>
+            <div className="text-image-div">
               <div className='prop-price'>
                 <div className="propert"><h1>{ti.property}</h1></div>
                 <div className="price"><h1 className="dol-sign">$</h1><h1>{ti.price}</h1></div>
+                <div className="link"><Link to={{pathname: `/comp/more/${ti._id}`}}><div className="prop-link"><h1>View {ti.property}</h1></div></Link></div>
               </div>
+            
+            </div>
               <div className="prop-image">
               
                 <div className="image-box" style= {{backgroundImage: `url(${Arr})`}}></div>
@@ -88,6 +93,7 @@ console.log(search)
           </div>
          
        </div>
+       <Email />
       <Footer />
        </>
     );
