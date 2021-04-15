@@ -52,41 +52,42 @@ function More(props) {
     </div>
 
        <div className="more-div">
+
           <div className="images">
             <div className="image-bb" style= {{backgroundImage: `url(${Arr})`}}></div>
           </div>
 
-          <div className="location">
+          <div className="info-div">
 
-               <div className="st-ci">
-                <h2 className="state">{state}</h2>
-                <h2 className="city">{city}</h2>
-               </div>
-              
-                <div className="address">
-                  <h2>address: {address}</h2>
-                </div>
-
-                <div className="poBox">
-                 <h2>{poBox}</h2>
-                </div>
-
-                 <div className="des">
-                   <p>{des}</p>
-                </div>
-              
+          <div className="location-div">
+            <div className="street">
+              <h1 className="st">{street}</h1>
+            <div className="state-zip">
+              <h1>{city},</h1>
+              <h1>{state},</h1>
+              <h1>{poBox}</h1>
             </div>
-
-
-            <div className="porperty-info">
-               <h2 className="sqf">property squarefootage: {sqf}</h2>
-               <h2>porperty anchers: {anchers}</h2>
-               <div className="home">
-                  <h2 className="bath">bathrooms: {bathrooms}</h2>
-                  <h2 className="bed">bedrooms: {bedrooms}</h2>
-                  <h1>{property}</h1>
-               </div>
             </div>
+            <div className="house-info">
+             <div className="bed-div"><h1>bed:{bedrooms}</h1></div>
+             <div className="bath-div"><h1>bath:{bathrooms}</h1></div>
+             <div className="sqf-div"><h1>sqf:{sqf}</h1></div>
+            </div>
+          </div>
+           
+        </div>
+
+        <div className="porp-div">
+          <div className="title-div">
+             <h1>property info</h1>
+             <div className="underline"></div>
+          </div>
+             
+             <div className="desp">
+               <p>{des}</p>
+             </div>
+           </div>
+
             <div className="btn">
               <Link to="/"><button onClick={Del}>delete</button></Link>
             </div> 

@@ -6,14 +6,9 @@ function Email() {
     const add = (e) => {
         e.preventDefault()
       
- 
- 
-  
-     
-        
-     /*   axios.post('/',  {
+        axios.post('/email',  {
           email: email
-        }) */
+        }) 
       }
     return (
      <div className="email-div">

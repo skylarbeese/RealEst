@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const List = require('./models/list')
+const Email = require('./models/email')
 const multer  = require('multer')
 const path = require('path')
 const cors = require('cors')
@@ -54,7 +55,20 @@ const upload = multer({
 
 
 
+app.post('/inst/email',  async (req, res) => {
+  try{
+    const email = req.body.email;
+    const emaill = new Email({
+      email
+ })
+ console.log(image)
+ console.log(rent)
+  emaill.save()
+ 
+  } catch(err) {
 
+  }
+})
 
 
 

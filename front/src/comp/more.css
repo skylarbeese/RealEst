@@ -17,6 +17,70 @@
     background-size: cover;
     overflow: hidden;
 }
-.location{
+.info-div{
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.location-div{
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+ 
+    padding-left: 2rem;
+    padding-right: 3rem;
+}
+.street{
+padding-top: 2rem;
+   
+}
+.street h1.st {
+    font-size: 2rem;
+    color: rgb(36, 36, 36);
+    padding-left: 2rem;
+}
+
+.state-zip{
+    justify-content: center;
+    align-items: center;
+    display: flex;
     
+}
+.state-zip h1 {
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    color: rgb(36, 36, 36);
+    letter-spacing: 4px;
+}
+.house-info{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.house-info h1 {
+    font-size: 1.2rem;
+    padding-left: 2rem;
+}
+
+.porp-div{
+   width: 100vw;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   padding-top: 3rem;
+}
+.title-div{
+    width: 80%;
+    padding-bottom: 2rem;
+}
+.desp {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
