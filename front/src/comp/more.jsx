@@ -35,7 +35,7 @@ function More(props) {
         setBathrooms(res.data.bathrooms), setBedrooms(res.data.bedrooms),
         setDes(res.data.des), setImage(res.data.image), setPrice(res.data.price),
         setStreet(res.data.street), setProperty(res.data.property), setExtra(res.data.extra),
-        setParking(res.data.parking), setRent(res.data.parking)
+        setParking(res.data.parking), setRent(res.data.rent)
     ])
        .catch(err => console.log(err)) 
      }, [])
@@ -76,16 +76,56 @@ function More(props) {
           </div>
            
         </div>
-
+        <div className="price-des-div">
         <div className="porp-div">
           <div className="title-div">
              <h1>property info</h1>
              <div className="underline"></div>
           </div>
-             
+          
              <div className="desp">
                <p>{des}</p>
              </div>
+           </div>
+
+           <div className="price-div">
+
+            <div className="price-rent">
+            <div className="pr">
+             <h1 className="dol-sign">$</h1><h1 className="pricee">{price}</h1>
+             </div>
+
+             <h1 className="rentt">{rent}</h1>
+            </div>
+            
+             <div className="underline"></div>
+             <div className="more-info">
+
+              {extra.length > 0 ? 
+              <div className="extra-fea">
+                <h1 className="features">features:</h1>
+                <h1 className="extraa">{extra}</h1>
+              </div> 
+              :  
+              <div className="extra-fea">
+               <h1 className="features">features:</h1>
+               <h1 className="extraa">none</h1>
+             </div>}
+              <div className="">
+                   {anchers.length > 0 ? 
+              <div className="extra-fea">
+                <h1 className="features">anchers:</h1>
+                <h1 className="extraa">{anchers}</h1>
+              </div> 
+              :  
+              <div className="extra-fea">
+               <h1 className="features">anchers:</h1>
+               <h1 className="extraa">none</h1>
+             </div>}
+             </div>
+             </div>
+           </div>
+            
            </div>
 
             <div className="btn">

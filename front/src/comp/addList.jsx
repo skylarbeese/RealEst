@@ -49,7 +49,7 @@ function AddList() {
          state: state, city: city, address: address, poBox: poBox,
          sqf: sqf, anchers: anchers, bathrooms: bathrooms, bedrooms: bedrooms,
          des: des,  price: price, street: street, property: property,
-         extra: extra, parking: parking,   rent: rent,  form
+         extra: extra, parking: parking,  rent: rent,  form
        })
        .then(res => setMessage(res.data))
    
@@ -137,9 +137,9 @@ function AddList() {
             <div className="radio-price">
               <label>price*</label>
               <input name="price-rent" type="radio" value="rent" className="" onChange={(e) => setRent(e.target.value)} /> Rent
-              <input name="price-rent" type="number" placeholder="price" className="form-control price-radio" onChange={(e) => setPrice(e.target.value)} />
+              <input name="price-sale" type="number" placeholder="price" className="form-control price-radio" onChange={(e) => setPrice(e.target.value)} />
 
-              <input name="price-sale" type="radio" value="sale" className="" onChange={(e) => setRent(e.target.value)} /> Sale
+              <input name="price-rent" type="radio" value="sale" className="" onChange={(e) => setRent(e.target.value)} /> Sale
               <input name="price-sale" type="number" placeholder="price" className="form-control price-radio" onChange={(e) => setPrice(e.target.value)} />
             </div>
             

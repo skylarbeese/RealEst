@@ -2,7 +2,7 @@
 
 .more-div {
     width: 100vw;
-   
+    
 }
 .images{
     width: 100%;
@@ -65,22 +65,73 @@ padding-top: 2rem;
     font-size: 1.2rem;
     padding-left: 2rem;
 }
-
+.price-des-div{
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+   
+}
 .porp-div{
-   width: 100vw;
+  width: 50%;
    justify-content: center;
    align-items: center;
    display: flex;
    flex-direction: column;
    padding-top: 3rem;
+  
+   padding: 1rem;
 }
 .title-div{
-    width: 80%;
+    width: 100%;
     padding-bottom: 2rem;
 }
 .desp {
-    width: 80%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
+}
+.price-div{
+    width: 30%;
+    height: 50vh;
+    padding: 1rem;
+  
+ 
+    margin-left: 2rem;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0, .2);
+    
+
+}
+.price-rent{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.pr{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.rentt{
+    font-size: 1.2rem;
+}
+.extra-fea{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding-top: 1rem;
+}
+.extra-fea h1 {
+    font-size: 1rem;
+}
+.btn button {
+  border: none;
+  background-color: teal;
+  color: white;
+  padding: .4rem 1rem .4rem 1rem;
+  border-radius: 10px;
 }
