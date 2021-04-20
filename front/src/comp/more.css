@@ -135,3 +135,63 @@ padding-top: 2rem;
   padding: .4rem 1rem .4rem 1rem;
   border-radius: 10px;
 }
+@media screen and (min-width: 0px) and (max-width: 900px) {
+    .price-des-div {
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .porp-div{
+        width: 80%;
+      
+      }
+      .price-div{
+        width: 80%;
+        height: 50vh;
+        padding: 1rem;
+    }
+    .street h1.st {
+        font-size: 1rem;
+        color: rgb(36, 36, 36);
+        padding-left: 2rem;
+    }
+    .state-zip h1 {
+        font-size: .7rem;
+        
+        letter-spacing: 4px;
+    }
+    .house-info h1 {
+        font-size: .8rem;
+    } 
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .location-div{
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-right: 3rem;
+    }
+    .house-info{
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        
+    }
+    .state-zip{
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        
+    }
+    .street{
+        width: 100%;
+           
+        }
+}
