@@ -263,13 +263,43 @@ a .prop-link{
     margin-left: .4rem;
 }
 
-@media screen and (min-width: 0px) and (max-width: 800px) {
+@media screen and (min-width: 0px) and (max-width: 600px) {
     
    
-    .sear {
-         font-size: .4rem;
+    .loc h1{
+    
+        margin: .3rem;
+        font-size: .3rem;
     }
-    .locat{
-        font-size: .4rem;
+}
+@media screen and (min-width: 0px) and (max-width: 1300px) {
+    
+    .new-list{
+        width: 100vw;
+      
+        
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .new-div{
+        width: 100%;
+        height: 60vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+    }
+    .listing-box{
+        width: 100vw;
+        height: 60vh;
+        background-color: transparent;
+        overflow: hidden;
+        color: black;
+        text-decoration: none;
+        position: relative;
     }
 }

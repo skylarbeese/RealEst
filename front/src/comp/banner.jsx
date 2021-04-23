@@ -1,4 +1,5 @@
 import Nav from './nav'
+import Footer from './footer'
 import React, { useState, useEffect } from 'react';
 import './Banner.css';
 import NewList from './newList'
@@ -59,7 +60,7 @@ function Banner(props) {
       {props.searchTerm.length > 1 ? <div className="loc"><div className="locc"><h1 className="sear">({props.search.length}) listings found for properties in location: </h1><h1 className="locat">{props.searchTerm}</h1></div></div>
       : <div className="loc"></div>}
        {props.search.length > 0 ? ( <NewList titleArray={props.titleArray}  searchTerm={props.searchTerm} search={props.search} data={data}/> )
-       : <div>none</div>} 
+       : <div><div className="no-sear"><h1>there are no results for this search, try another location</h1></div><Footer/></div>} 
 
        </div>
        </>

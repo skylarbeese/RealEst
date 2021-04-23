@@ -130,4 +130,11 @@ nav{
        width: 35%;
       
     }
+    .nav-div-bur{
+        width: 100vw;
+        height: 6vh;
+        background-color: black;
+        position: absolute;
+        z-index: 1;
+    }
 }
